@@ -1,0 +1,170 @@
+.journal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.journal__calendar {
+    flex: 1 1 300px;
+    max-width: 500px;
+}
+
+.journal__calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 18px;
+}
+
+.journal__calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    position: relative;
+}
+
+.journal__calendar-cell {
+    position: relative;
+    padding: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    min-height: 50px;
+    border-radius: 6px;
+}
+
+.journal__calendar-day {
+    font-weight: bold;
+    background-color: #f0f0f0;
+}
+
+.journal__calendar-cell.dimmed {
+    opacity: 0.4;
+}
+
+.journal__calendar-cell.sunday {
+    color: red;
+}
+
+.journal__calendar-selected {
+    position: absolute;
+    inset: 0;
+    border: 2px solid black;
+    border-radius: 6px;
+    pointer-events: none;
+    transform: translate(0, 0);
+    transition: transform 0.2s ease;
+    z-index: 1;
+}
+
+.journal__panel {
+    flex: 1 1 300px;
+}
+
+.journal__students {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.journal__student {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.journal__student:hover {
+    background: #eaeaea;
+}
+
+.journal__student-name {
+    font-weight: 500;
+}
+
+.journal__student-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.journal__student-status {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.journal__calendar-header button {
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 6px;
+    padding: 0.3rem 0.7rem;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.2s ease;
+}
+
+.journal__calendar-header button:hover {
+    background-color: #cfcfcf;
+}
+
+.journal__mark-btn {
+    padding: 0.3rem 0.7rem;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ff5252;
+    background: #fff;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.journal__mark-btn.active {
+    background-color: #ff5252;
+    color: white;
+    border-color: #ff5252;
+}
+
+.journal__mark-btn:nth-child(2) {
+    border-color: #ffc107;
+}
+
+.journal__mark-btn:nth-child(2).active {
+    background-color: #ffc107;
+    color: white;
+}
+
+.journal__mark-btn:nth-child(1) {
+    border-color: #28a745;
+}
+
+.journal__mark-btn:nth-child(1).active {
+    background-color: #28a745;
+    color: white;
+}
+
+.journal__calendar-highlight {
+    position: absolute;
+    border: 2px solid black;
+    border-radius: 6px;
+    pointer-events: none;
+    transition: transform 0.2s ease, width 0.2s ease, height 0.2s ease;
+    z-index: 2;
+}
+
+.schedule__selectors {
+    display: flex;
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    .journal {
+        flex-direction: column;
+    }
+
+    .journal__calendar,
+    .journal__panel {
+        width: 100%;
+    }
+}

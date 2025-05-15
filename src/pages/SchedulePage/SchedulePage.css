@@ -1,0 +1,120 @@
+.schedule {
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.schedule__title {
+    font-size: 24px;
+    text-align: center;
+    color: #0288d1;
+    margin-bottom: 20px;
+}
+
+.schedule__group-selector {
+    margin-bottom: 20px;
+}
+
+.schedule__group-button {
+    background-color: #e1f5fe;
+    border: 1px solid #81d4fa;
+    border-radius: 10px;
+    padding: 10px 16px;
+    font-weight: bold;
+    color: #0277bd;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.schedule__group-button:hover {
+    background-color: #b3e5fc;
+}
+
+.schedule__group-dropdown-wrapper {
+    position: absolute;
+    z-index: 1000;
+    margin-top: 5px;
+    height: 0;
+    overflow: scroll;
+    transition: height 0.3s;
+}
+
+.schedule__group-dropdown-wrapper.open {
+    position: absolute;
+    z-index: 1000;
+    margin-top: 5px;
+    height: 200px;
+}
+
+.schedule__group-dropdown {
+    background: white;
+    border: 1px solid #81d4fa;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.schedule__group-item {
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #0277bd;
+}
+
+.schedule__group-item:hover {
+    background-color: #e1f5fe;
+}
+
+.schedule__rows {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.schedule__row {
+    display: flex;
+    gap: 0;
+}
+
+.schedule__column {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e0f7fa;
+    background: white;
+    min-width: 150px;
+    box-sizing: border-box;
+}
+
+.schedule__day-header {
+    background-color: #e3f2fd;
+    color: #01579b;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #e0f7fa;
+    word-wrap: break-word;
+}
+
+.schedule__cell {
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid #e0f7fa;
+    min-height: 50px;
+    overflow: hidden;
+    white-space: normal;
+    word-wrap: break-word;
+    transition: background 0.2s ease;
+}
+
+.schedule__cell:hover {
+    background-color: #f1f8ff;
+}
+
+.schedule__nums-column {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
+
+.schedule__cell--nums {
+    font-weight: bold;
+    background-color: #f9f9f9;
+}

@@ -1,0 +1,490 @@
+[
+  {
+    "id": 1,
+    "login": "teacher1",
+    "password": "1234",
+    "role": "teacher",
+    "fullName": "Иванов Иван Иванович",
+    "subjects": ["Физика", "Философия"]
+  },
+  {
+    "id": 2,
+    "login": "teacher2",
+    "password": "1234",
+    "role": "teacher",
+    "fullName": "Смирнова Елена Васильевна",
+    "subjects": ["Информатика", "Программирование", "Моделирование"]
+  },
+  {
+    "id": 3,
+    "login": "teacher3",
+    "password": "1234",
+    "role": "teacher",
+    "fullName": "Кузнецов Алексей Павлович",
+    "subjects": ["История", "Физкультура"]
+  },
+  {
+    "id": 4,
+    "login": "teacher4",
+    "password": "1234",
+    "role": "teacher",
+    "fullName": "Попова Анна Сергеевна",
+    "subjects": ["Проектирование"]
+  },
+  {
+    "id": 5,
+    "login": "teacher5",
+    "password": "1234",
+    "role": "teacher",
+    "fullName": "Соколов Дмитрий Игоревич",
+    "subjects": ["Физика", "Анализ"]
+  },
+  {
+    "id": 6,
+    "login": "teacher6",
+    "password": "1234",
+    "role": "teacher",
+    "fullName": "Лебедева Виктория Юрьевна",
+    "subjects": ["Информатика", "Философия"]
+  },
+  {
+    "id": 7,
+    "login": "teacher7",
+    "password": "1234",
+    "role": "teacher",
+    "fullName": "Новиков Олег Анатольевич",
+    "subjects": ["Программирование", "Матанализ"]
+  },
+  {
+    "id": 8,
+    "login": "teacher8",
+    "password": "1234",
+    "role": "teacher",
+    "fullName": "Морозова Татьяна Владимировна",
+    "subjects": ["История", "Философия"]
+  },
+  {
+    "id": 9,
+    "login": "teacher9",
+    "password": "1234",
+    "role": "teacher",
+    "fullName": "Волков Николай Степанович",
+    "subjects": ["Физика", "Моделирование", "Информатика"]
+  },
+  {
+    "id": 10,
+    "login": "teacher10",
+    "password": "1234",
+    "role": "teacher",
+    "fullName": "Зайцева Марина Дмитриевна",
+    "subjects": ["Анализ"]
+  },
+  {
+    "id": 11,
+    "login": "student1",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Орлов Артём Иванович",
+    "group": "ИКБО-01-21"
+  },
+  {
+    "id": 12,
+    "login": "student2",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Киселёва Дарья Александровна",
+    "group": "ИКБО-01-21"
+  },
+  {
+    "id": 13,
+    "login": "student3",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Макаров Илья Сергеевич",
+    "group": "ИКБО-01-21"
+  },
+  {
+    "id": 14,
+    "login": "student4",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Волкова Екатерина Михайловна",
+    "group": "ИКБО-01-21"
+  },
+  {
+    "id": 15,
+    "login": "student5",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Фролов Андрей Павлович",
+    "group": "ИКБО-01-21"
+  },
+
+  {
+    "id": 16,
+    "login": "student6",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Громова Софья Владимировна",
+    "group": "ИЛБО-02-22"
+  },
+  {
+    "id": 17,
+    "login": "student7",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Мельников Артём Дмитриевич",
+    "group": "ИЛБО-02-22"
+  },
+  {
+    "id": 18,
+    "login": "student8",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Тимофеева Алина Романовна",
+    "group": "ИЛБО-02-22"
+  },
+  {
+    "id": 19,
+    "login": "student9",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Сидоров Николай Аркадьевич",
+    "group": "ИЛБО-02-22"
+  },
+  {
+    "id": 20,
+    "login": "student10",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Попова Ксения Ивановна",
+    "group": "ИЛБО-02-22"
+  },
+
+  {
+    "id": 21,
+    "login": "student11",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Егоров Алексей Витальевич",
+    "group": "ИМБО-03-23"
+  },
+  {
+    "id": 22,
+    "login": "student12",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Андреева Виктория Евгеньевна",
+    "group": "ИМБО-03-23"
+  },
+  {
+    "id": 23,
+    "login": "student13",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Григорьев Тимур Алексеевич",
+    "group": "ИМБО-03-23"
+  },
+  {
+    "id": 24,
+    "login": "student14",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Сафонова Анна Игоревна",
+    "group": "ИМБО-03-23"
+  },
+  {
+    "id": 25,
+    "login": "student15",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Данилов Владислав Эдуардович",
+    "group": "ИМБО-03-23"
+  },
+
+  {
+    "id": 26,
+    "login": "student16",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Ковалева Валерия Константиновна",
+    "group": "ИНБО-04-24"
+  },
+  {
+    "id": 27,
+    "login": "student17",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Лебедев Артём Михайлович",
+    "group": "ИНБО-04-24"
+  },
+  {
+    "id": 28,
+    "login": "student18",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Федорова Анастасия Романовна",
+    "group": "ИНБО-04-24"
+  },
+  {
+    "id": 29,
+    "login": "student19",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Жуков Павел Владиславович",
+    "group": "ИНБО-04-24"
+  },
+  {
+    "id": 30,
+    "login": "student20",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Захарова Мария Олеговна",
+    "group": "ИНБО-04-24"
+  },
+
+  {
+    "id": 31,
+    "login": "student21",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Семенов Артём Валентинович",
+    "group": "ИОБО-05-25"
+  },
+  {
+    "id": 32,
+    "login": "student22",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Александрова Дарья Тимофеевна",
+    "group": "ИОБО-05-25"
+  },
+  {
+    "id": 33,
+    "login": "student23",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Белов Иван Денисович",
+    "group": "ИОБО-05-25"
+  },
+  {
+    "id": 34,
+    "login": "student24",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Виноградова Алина Алексеевна",
+    "group": "ИОБО-05-25"
+  },
+  {
+    "id": 35,
+    "login": "student25",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Романов Олег Игоревич",
+    "group": "ИОБО-05-25"
+  },
+  {
+    "id": 36,
+    "login": "student26",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Никитина Софья Андреевна",
+    "group": "ИКБО-01-21"
+  },
+  {
+    "id": 37,
+    "login": "student27",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Морозов Егор Алексеевич",
+    "group": "ИКБО-01-21"
+  },
+  {
+    "id": 38,
+    "login": "student28",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Сорокина Полина Сергеевна",
+    "group": "ИКБО-01-21"
+  },
+  {
+    "id": 39,
+    "login": "student29",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Куликов Артём Евгеньевич",
+    "group": "ИКБО-01-21"
+  },
+  {
+    "id": 40,
+    "login": "student30",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Лазарева Мария Дмитриевна",
+    "group": "ИКБО-01-21"
+  },
+
+  {
+    "id": 41,
+    "login": "student31",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Комаров Иван Олегович",
+    "group": "ИЛБО-02-22"
+  },
+  {
+    "id": 42,
+    "login": "student32",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Рябова Виктория Артёмовна",
+    "group": "ИЛБО-02-22"
+  },
+  {
+    "id": 43,
+    "login": "student33",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Гусев Максим Валерьевич",
+    "group": "ИЛБО-02-22"
+  },
+  {
+    "id": 44,
+    "login": "student34",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Кондратьева Алина Алексеевна",
+    "group": "ИЛБО-02-22"
+  },
+  {
+    "id": 45,
+    "login": "student35",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Демин Сергей Николаевич",
+    "group": "ИЛБО-02-22"
+  },
+
+  {
+    "id": 46,
+    "login": "student36",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Мартынова Кристина Дмитриевна",
+    "group": "ИМБО-03-23"
+  },
+  {
+    "id": 47,
+    "login": "student37",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Тарасов Артём Сергеевич",
+    "group": "ИМБО-03-23"
+  },
+  {
+    "id": 48,
+    "login": "student38",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Фомина Анастасия Павловна",
+    "group": "ИМБО-03-23"
+  },
+  {
+    "id": 49,
+    "login": "student39",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Беляев Михаил Олегович",
+    "group": "ИМБО-03-23"
+  },
+  {
+    "id": 50,
+    "login": "student40",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Агапова Валерия Станиславовна",
+    "group": "ИМБО-03-23"
+  },
+
+  {
+    "id": 51,
+    "login": "student41",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Тихонов Илья Алексеевич",
+    "group": "ИНБО-04-24"
+  },
+  {
+    "id": 52,
+    "login": "student42",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Щербакова Вероника Максимовна",
+    "group": "ИНБО-04-24"
+  },
+  {
+    "id": 53,
+    "login": "student43",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Родионов Денис Артёмович",
+    "group": "ИНБО-04-24"
+  },
+  {
+    "id": 54,
+    "login": "student44",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Кудряшова Елизавета Романовна",
+    "group": "ИНБО-04-24"
+  },
+  {
+    "id": 55,
+    "login": "student45",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Шестаков Кирилл Дмитриевич",
+    "group": "ИНБО-04-24"
+  },
+
+  {
+    "id": 56,
+    "login": "student46",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Кравцова Анастасия Викторовна",
+    "group": "ИОБО-05-25"
+  },
+  {
+    "id": 57,
+    "login": "student47",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Мухин Артём Олегович",
+    "group": "ИОБО-05-25"
+  },
+  {
+    "id": 58,
+    "login": "student48",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Савельева Дарья Николаевна",
+    "group": "ИОБО-05-25"
+  },
+  {
+    "id": 59,
+    "login": "student49",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Зуев Евгений Александрович",
+    "group": "ИОБО-05-25"
+  },
+  {
+    "id": 60,
+    "login": "student50",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Борисова Татьяна Сергеевна",
+    "group": "ИОБО-05-25"
+  }
+]
