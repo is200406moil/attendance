@@ -486,5 +486,245 @@
     "role": "student",
     "fullName": "Борисова Татьяна Сергеевна",
     "group": "ИОБО-05-25"
+  },
+  {
+    "id": 101,
+    "login": "agametova",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Агаметова Б. К.",
+    "group": "ИКБО-14-23"
+  },
+  {
+    "id": 102,
+    "login": "bogomolov",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Богомолов К. А.",
+    "group": "ИКБО-14-23"
+  },
+  {
+    "id": 103,
+    "login": "bulychev",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Булычев Н. А.",
+    "group": "ИКБО-14-23"
+  },
+  {
+    "id": 104,
+    "login": "giyesidinov",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Гиёсидинов И. И.",
+    "group": "ИКБО-14-23"
+  },
+  {
+    "id": 105,
+    "login": "daev",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Даев А. Н.",
+    "group": "ИКБО-14-23"
+  },
+  {
+    "id": 106,
+    "login": "evseev",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Евсеев В. Д.",
+    "group": "ИКБО-14-23"
+  },
+  {
+    "id": 107,
+    "login": "ershov",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Ершов М. А.",
+    "group": "ИКБО-14-23"
+  },
+  {
+    "id": 108,
+    "login": "efimkin",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Ефимкин Г. Е.",
+    "group": "ИКБО-14-23"
+  },
+  {
+    "id": 109,
+    "login": "zhuravlev",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Журавлёв Д. А.",
+    "group": "ИКБО-14-23"
+  },
+  {
+    "id": 110,
+    "login": "zaprudnov",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Запруднов Ф. С.",
+    "group": "ИКБО-14-23"
+  },
+  {
+    "id": 111,
+    "login": "isaev",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Исаев Ю. К.",
+    "group": "ИКБО-14-23"
+  },
+  {
+    "id": 112,
+    "login": "karlyavin",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Карлявин М. Р.",
+    "group": "ИКБО-14-23"
+  },
+  {
+    "id": 113,
+    "login": "karpovich",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Карпович Д. С.",
+    "group": "ИКБО-14-23"
+  },
+  {
+    "id": 114,
+    "login": "kasymov",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Касымов Х. О.",
+    "group": "ИКБО-14-23"
+  },
+  {
+    "id": 115,
+    "login": "kozhevnikov",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Кожевников В. О.",
+    "group": "ИКБО-14-23"
+  },
+  {
+    "id": 116,
+    "login": "komarovr",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Комаров Р. Б.",
+    "group": "ИКБО-14-23"
+  },
+  {
+    "id": 117,
+    "login": "komova",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Комова Д.",
+    "group": "ИКБО-14-23"
+  },
+  {
+    "id": 118,
+    "login": "kotovich",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Котович М. А.",
+    "group": "ИКБО-14-23"
+  },
+  {
+    "id": 119,
+    "login": "leontiev",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Леонтьев В. Д.",
+    "group": "ИКБО-14-23"
+  },
+  {
+    "id": 120,
+    "login": "mitrofanov",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Митрофанов М. А.",
+    "group": "ИКБО-14-23"
+  },
+  {
+    "id": 121,
+    "login": "miheeva",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Михеева Е. В.",
+    "group": "ИКБО-14-23"
+  },
+  {
+    "id": 122,
+    "login": "petrishchev",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Петрищев Н. А.",
+    "group": "ИКБО-14-23"
+  },
+  {
+    "id": 123,
+    "login": "slisarenko",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Слисаренко И. И.",
+    "group": "ИКБО-14-23"
+  },
+  {
+    "id": 124,
+    "login": "smirnov",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Смирнов А. И.",
+    "group": "ИКБО-14-23"
+  },
+  {
+    "id": 125,
+    "login": "tomshin",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Томшин С. В.",
+    "group": "ИКБО-14-23"
+  },
+  {
+    "id": 126,
+    "login": "farkhodzoda",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Фарходзода С.",
+    "group": "ИКБО-14-23"
+  },
+  {
+    "id": 127,
+    "login": "khaspalaev",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Хаспалаев А. А.",
+    "group": "ИКБО-14-23"
+  },
+  {
+    "id": 128,
+    "login": "chekkuev",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Чеккуев А. М.",
+    "group": "ИКБО-14-23"
+  },
+  {
+    "id": 129,
+    "login": "shobin",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Шобин Н. А.",
+    "group": "ИКБО-14-23"
+  },
+  {
+    "id": 130,
+    "login": "shurupov",
+    "password": "1234",
+    "role": "student",
+    "fullName": "Шурупов Д. А.",
+    "group": "ИКБО-14-23"
   }
 ]

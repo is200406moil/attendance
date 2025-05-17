@@ -1,22 +1,71 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './JournalPage.css';
-import { isTeacher, getGroups, getSchedule, getStudents, setData } from '../../utils/localUtils';
+import { isTeacher, getGroups, getSchedule, getStudents, setData, getData, getSessionData, setSessionData } from '../../utils/localUtils';
 import Header from "../../components/Header/Header";
+import { User, Schedule } from '../../types';
 
 const daysOfWeek = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
 
 const JournalPage = () => {
     const teacherMode = isTeacher();
+    const currentUser = getData<User | null>('currentUser', null);
 
     const [currentDate, setCurrentDate] = useState(new Date());
     const [selectedDate, setSelectedDate] = useState(new Date());
-    const [selectedGroup, setSelectedGroup] = useState('');
-    const [selectedPair, setSelectedPair] = useState<string>('1');
+    const [selectedGroup, setSelectedGroup] = useState(
+        currentUser?.role === 'student' 
+            ? currentUser.group 
+            : getSessionData('selectedGroup', '')
+    );
+
+    // Функция для получения доступных пар
+    const getAvailablePairs = (date: Date, group: string | undefined) => {
+        if (!group) return [];
+        const dayName = date.toLocaleString('ru-RU', { weekday: 'long' });
+        const capitalizedDay = dayName.charAt(0).toUpperCase() + dayName.slice(1);
+        const schedule = getSchedule();
+        const groupSchedule = schedule[group];
+        if (!groupSchedule || !groupSchedule[capitalizedDay]) return [];
+        
+        return Object.keys(groupSchedule[capitalizedDay])
+            .map(pair => parseInt(pair))
+            .sort((a, b) => a - b);
+    };
+
+    // Функция для получения первой доступной пары
+    const getFirstAvailablePair = (date: Date, group: string | undefined) => {
+        const pairs = getAvailablePairs(date, group);
+        return pairs.length > 0 ? pairs[0].toString() : '1';
+    };
+
+    const [selectedPair, setSelectedPair] = useState(() => 
+        getFirstAvailablePair(selectedDate, selectedGroup)
+    );
+
+    // Обновляем выбранную пару при изменении даты или группы
+    useEffect(() => {
+        const updateSelectedPair = () => {
+            setSelectedPair(getFirstAvailablePair(selectedDate, selectedGroup));
+        };
+        updateSelectedPair();
+    }, [selectedDate, selectedGroup]);
+
     const [groupDropdownOpen, setGroupDropdownOpen] = useState(false);
     const [pairDropdownOpen, setPairDropdownOpen] = useState(false);
 
     const schedule = getSchedule();
     const students = selectedGroup ? getStudents(selectedGroup).sort((a, b) => a.fullName.localeCompare(b.fullName)) : [];
+
+    const getCurrentSubject = () => {
+        if (!selectedGroup) return 'Выберите группу';
+        const dayName = selectedDate.toLocaleString('ru-RU', { weekday: 'long' });
+        const capitalizedDay = dayName.charAt(0).toUpperCase() + dayName.slice(1);
+        const groupSchedule = (schedule as Schedule)[selectedGroup];
+        if (!groupSchedule || !groupSchedule[capitalizedDay]) return 'Нет занятия';
+        return groupSchedule[capitalizedDay][selectedPair] || 'Нет занятия';
+    };
+
+    const currentSubject = getCurrentSubject();
 
     const attendanceKey = `${selectedGroup}-${selectedPair}-${selectedDate.toDateString()}`;
     const [attendance, setAttendance] = useState(() => {
@@ -82,11 +131,18 @@ const JournalPage = () => {
         });
     }, [selectedDate, currentDate]);
 
+    const handleGroupSelect = (group: string) => {
+        setSelectedGroup(group);
+        setGroupDropdownOpen(false);
+        if (teacherMode) {
+            setSessionData('selectedGroup', group);
+        }
+    };
 
     return (
         <>
             <Header />
-            <div>
+            <div className="journal-container">
                 <div className="journal">
                     <div className="journal__calendar">
                         <div className="journal__calendar-header">
@@ -121,13 +177,11 @@ const JournalPage = () => {
                         <div className="schedule__selectors">
                             <div className="schedule__group-selector">
                                 <button className="schedule__group-button" onClick={() => setPairDropdownOpen(prev => !prev)}>
-                                    {selectedPair || 'Выбрать пару'} ▾
+                                    {selectedPair ? `${selectedPair}-я пара` : 'Выбрать пару'} ▾
                                 </button>
                                 <div className={`schedule__group-dropdown-wrapper ${pairDropdownOpen ? 'open' : ''}`}>
                                     <div className="schedule__group-dropdown">
-                                        {[1, 2, 3, 4, 5, 6]
-                                            .filter(p => Array.isArray(schedule[selectedGroup]) || schedule[selectedGroup])
-                                            .map(p => (
+                                        {getAvailablePairs(selectedDate, selectedGroup).map(p => (
                                                 <div
                                                     key={p}
                                                     className="schedule__group-item"
@@ -143,6 +197,7 @@ const JournalPage = () => {
                                 </div>
                             </div>
 
+                            {teacherMode ? (
                             <div className="schedule__group-selector">
                                 <button className="schedule__group-button" onClick={() => setGroupDropdownOpen(prev => !prev)}>
                                     {selectedGroup || 'Выбрать группу'} ▾
@@ -150,13 +205,26 @@ const JournalPage = () => {
                                 <div className={`schedule__group-dropdown-wrapper ${groupDropdownOpen ? 'open' : ''}`}>
                                     <div className="schedule__group-dropdown">
                                         {getGroups().map(group => (
-                                            <div key={group} className="schedule__group-item" onClick={() => { setSelectedGroup(group); setGroupDropdownOpen(false); }}>
+                                                <div 
+                                                    key={group} 
+                                                    className="schedule__group-item" 
+                                                    onClick={() => handleGroupSelect(group)}
+                                                >
                                                 {group}
                                             </div>
                                         ))}
                                     </div>
                                 </div>
                             </div>
+                            ) : (
+                                <div className="schedule__group-display">
+                                    <span className="schedule__group-button">{selectedGroup}</span>
+                                </div>
+                            )}
+                        </div>
+
+                        <div className="journal__subject">
+                            Предмет: {currentSubject}
                         </div>
 
                         <div className="journal__students">
@@ -168,7 +236,7 @@ const JournalPage = () => {
                                         <div className="journal__student-name">{student.fullName}</div>
                                         {teacherMode ? (
                                             <div className="journal__student-buttons">
-                                                {['-', 'У', '+'].map(m => (
+                                                {['+', 'У', '-'].map(m => (
                                                     <button
                                                         key={m}
                                                         className={`journal__mark-btn ${mark === m ? 'active' : ''}`}

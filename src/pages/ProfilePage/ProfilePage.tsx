@@ -44,7 +44,7 @@ const ProfilePage: React.FC = () => {
                     <div className="profile__info"><strong>Логин:</strong> {user.login}</div>
                     <div className="profile__info"><strong>ФИО:</strong> {user.fullName}</div>
                     {user.role === 'student' && <div className="profile__info"><strong>Группа:</strong> {user.group}</div>}
-                    {user.role === 'teacher' && (
+                    {user.role === 'teacher' && user.subjects && (
                         <div className="profile__info">
                             <strong>Предметы:</strong> {user.subjects.join(', ')}
                         </div>

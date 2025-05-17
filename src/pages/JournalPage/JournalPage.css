@@ -156,6 +156,83 @@
 .schedule__selectors {
     display: flex;
     gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.schedule__group-selector {
+    position: relative;
+}
+
+.schedule__group-display {
+    position: relative;
+}
+
+.schedule__group-button {
+    background-color: #e1f5fe;
+    border: 1px solid #81d4fa;
+    border-radius: 10px;
+    padding: 10px 16px;
+    font-weight: bold;
+    color: #0277bd;
+    cursor: pointer;
+    transition: background 0.3s;
+    min-width: 150px;
+    height: 42px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.schedule__group-display .schedule__group-button {
+    cursor: default;
+}
+
+.schedule__group-button:hover:not(.schedule__group-display .schedule__group-button) {
+    background-color: #b3e5fc;
+}
+
+.schedule__group-dropdown-wrapper {
+    position: absolute;
+    z-index: 1000;
+    margin-top: 5px;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s, opacity 0.2s;
+    background: white;
+    border: 1px solid #81d4fa;
+    border-radius: 8px;
+    min-width: 150px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.schedule__group-dropdown-wrapper.open {
+    height: auto;
+    max-height: fit-content;
+    overflow-y: auto;
+    opacity: 1;
+    visibility: visible;
+    border: 1px solid #81d4fa;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.schedule__group-dropdown {
+    background: white;
+    padding: 4px 0;
+}
+
+.schedule__group-item {
+    padding: 8px 12px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #0277bd;
+    transition: background-color 0.2s ease;
+}
+
+.schedule__group-item:hover {
+    background-color: #e1f5fe;
 }
 
 @media (max-width: 768px) {
@@ -167,4 +244,19 @@
     .journal__panel {
         width: 100%;
     }
+}
+
+.journal__subject {
+    font-size: 20px;
+    color: #0277bd;
+    font-weight: bold;
+    margin-bottom: 16px;
+    padding: 12px;
+    background-color: #e1f5fe;
+    border-radius: 10px;
+    border: 1px solid #81d4fa;
+}
+
+.journal-container {
+    flex: 1;
 }

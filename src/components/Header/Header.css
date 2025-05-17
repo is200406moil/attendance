@@ -43,8 +43,7 @@
     color: #007c91;
 }
 
-.header__button.active,
-.header__mobile-menu button.active {
+.header__button.active, .header__mobile-menu button.active {
     background: linear-gradient(135deg, #00acc1, #4dd0e1);
     color: #ffffff;
     border: none;

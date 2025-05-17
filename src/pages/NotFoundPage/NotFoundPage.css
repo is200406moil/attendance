@@ -1,0 +1,133 @@
+.not-found {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%);
+    padding: 20px;
+}
+
+.not-found__content {
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    animation: slideUp 0.5s ease-out;
+}
+
+.not-found__code {
+    font-size: 120px;
+    font-weight: bold;
+    color: #0277bd;
+    line-height: 1;
+    margin-bottom: 20px;
+    text-shadow: 4px 4px 0 #b3e5fc;
+    animation: pulse 2s infinite;
+}
+
+.not-found__title {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 16px;
+}
+
+.not-found__description {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 32px;
+    line-height: 1.5;
+}
+
+.not-found__actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.not-found__button {
+    padding: 12px 24px;
+    border: 2px solid #0277bd;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: #0277bd;
+}
+
+.not-found__button i {
+    font-size: 18px;
+}
+
+.not-found__button--primary {
+    background: #0277bd;
+    color: white;
+}
+
+.not-found__button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(2, 119, 189, 0.2);
+}
+
+.not-found__button--primary:hover {
+    background: #0288d1;
+    border-color: #0288d1;
+}
+
+.not-found__button:active {
+    transform: translateY(0);
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 480px) {
+    .not-found__content {
+        padding: 30px 20px;
+    }
+
+    .not-found__code {
+        font-size: 100px;
+    }
+
+    .not-found__title {
+        font-size: 24px;
+    }
+
+    .not-found__actions {
+        flex-direction: column;
+    }
+
+    .not-found__button {
+        width: 100%;
+        justify-content: center;
+    }
+}

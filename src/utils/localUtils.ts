@@ -1,3 +1,5 @@
+import { Schedule, User } from '../types';
+
 export const getData = <T>(key: string, fallback: T): T => {
     const data = localStorage.getItem(key);
     return data ? JSON.parse(data) : fallback;
@@ -7,11 +9,13 @@ export const setData = <T>(key: string, value: T): void => {
     localStorage.setItem(key, JSON.stringify(value));
 };
 
-type User = {
-    id: string;
-    fullName: string;
-    role: 'student' | 'teacher';
-    group?: string;
+export const getSessionData = <T>(key: string, fallback: T): T => {
+    const data = sessionStorage.getItem(key);
+    return data ? JSON.parse(data) : fallback;
+};
+
+export const setSessionData = <T>(key: string, value: T): void => {
+    sessionStorage.setItem(key, JSON.stringify(value));
 };
 
 export const isTeacher = () => {
@@ -20,16 +24,11 @@ export const isTeacher = () => {
 };
 
 export const getGroups = (): string[] => {
-    const schedule = getData<Record<string, any>>('schedule', {});
+    const schedule = getData<Schedule>('schedule', {});
     return Object.keys(schedule);
 };
 
-type ScheduleItem = {
-    day: string;
-    pair: number;
-};
-
-export const getSchedule = (): Record<string, ScheduleItem[]> => {
+export const getSchedule = (): Schedule => {
     return getData('schedule', {});
 };
 

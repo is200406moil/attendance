@@ -72,7 +72,7 @@ const LoginPage: React.FC = () => {
                     className="auth__slider"
                     style={{ transform: isLoginMode ? 'translateX(0)' : 'translateX(-50%)' }}
                 >
-                    <div className="auth__form auth__form--login">
+                    <div className="auth__form auth__form--login" data-testid="login-form">
                         <h1 className={"auth_title"}>Вход</h1>
                         <input
                             className="auth__input"
@@ -89,10 +89,10 @@ const LoginPage: React.FC = () => {
                             onChange={e => setPassword(e.target.value)}
                         />
                         <button className="auth__button" onClick={handleLogin}>Войти</button>
-                        {error && <div className="auth__error">{error}</div>}
+                        {error && <div className="auth__error" data-testid="login-error">{error}</div>}
                     </div>
 
-                    <div className="auth__form auth__form--register">
+                    <div className="auth__form auth__form--register" data-testid="register-form">
                         <h1 className={"auth_title"}>Регистрация</h1>
                         <input
                             className="auth__input"
@@ -155,7 +155,7 @@ const LoginPage: React.FC = () => {
 
 
                         <button className="auth__button" onClick={handleRegister}>Зарегистрироваться</button>
-                        {error && <div className="auth__error">{error}</div>}
+                        {error && <div className="auth__error" data-testid="register-error">{error}</div>}
                     </div>
                 </div>
             </div>
