@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: './src/index.tsx',
@@ -29,7 +30,7 @@ module.exports = {
                 use: ['style-loader', 'css-loader']
             },
             {
-                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
                 type: 'asset/resource'
             }
         ]
@@ -39,7 +40,15 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './public/index.html'
+            template: './public/index.html',
+            favicon: './public/favicon.ico'
+        }),
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: 'public/manifest.json', to: 'manifest.json' },
+                { from: 'public/logo16.png', to: 'logo16.png' },
+                { from: 'public/favicon.ico', to: 'favicon.ico' }
+            ]
         })
     ],
     devServer: {

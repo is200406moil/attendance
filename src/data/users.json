@@ -81,11 +81,11 @@
   },
   {
     "id": 11,
-    "login": "student1",
+    "login": "giyesidinov",
     "password": "1234",
     "role": "student",
-    "fullName": "Орлов Артём Иванович",
-    "group": "ИКБО-01-21"
+    "fullName": "Гиёсидинов И. И.",
+    "group": "ИКБО-14-23"
   },
   {
     "id": 12,
