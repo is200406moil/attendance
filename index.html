@@ -10,9 +10,7 @@
               l.pathname.slice(0, -1) + decoded + l.hash
           );
         }
-      }(window.location))
-
-      // Handle direct navigation to routes
+      }(window.location));
       (function() {
         var path = window.location.pathname;
         if (path !== '/' && path !== '/attendance/' && !path.includes('index.html')) {
