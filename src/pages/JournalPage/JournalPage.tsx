@@ -162,7 +162,12 @@ const JournalPage = () => {
                                         <div
                                             key={rowIdx * 7 + colIdx}
                                             className={`journal__calendar-cell ${!isCurrentMonth ? 'dimmed' : ''} ${colIdx === 6 ? 'sunday' : ''}`}
-                                            onClick={() => setSelectedDate(date)}
+                                            onClick={() => {
+                                                setSelectedDate(date);
+                                                if (!isCurrentMonth) {
+                                                    setCurrentDate(new Date(date.getFullYear(), date.getMonth(), 1));
+                                                }
+                                            }}
                                         >
                                             <span>{date.getDate()}</span>
                                         </div>
